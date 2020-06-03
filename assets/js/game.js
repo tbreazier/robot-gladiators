@@ -40,7 +40,7 @@ var fight = function(enemyName) {
     console.log(
       playerName + ' attacked ' + enemyName + '. ' + enemyName + ' now has ' + enemyHealth + ' health remaining.'
     );
-
+    
     // check enemy's health
     if (enemyHealth <= 0) {
       window.alert(enemyName + ' has died!');
@@ -72,7 +72,15 @@ var fight = function(enemyName) {
 };
 
 for (var i = 0; i < enemyName.length; i++) {
+  if (playerHealth > 0) {
+    window.alert("Welcome to Robot Gladiators! Round " + (i + 1));
   var pickedEnemyName = enemyName[i];
   enemyHealth = 50;
   fight(pickedEnemyName);
+  } 
+  
+  else {
+    window.alert("You have lost your robot in battle! Game Over!");
+    break;
+  }
 }
