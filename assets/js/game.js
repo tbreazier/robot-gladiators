@@ -80,7 +80,11 @@ var startGame = function(){
       window.alert("Welcome to Robot Gladiators! Round " + (i + 1));
     var pickedEnemyName = enemyName[i];
     enemyHealth = 50;
-    fight(pickedEnemyName); 
+    fight(pickedEnemyName);
+    
+    if (playerHealth > 0 && i <enemyName.length -1) {
+      shop();
+    }
     } 
     else {
       window.alert("You have lost your robot in battle! Game Over!");
@@ -107,8 +111,12 @@ var endGame = function(){
     else {
       window.alert("Thank you for playing Robot Gladiators! Come back soon!");
     }
-  }
+}
 
-  startGame();
+var shop = function(){
+  console.log("entered the shop");
+};
+
+startGame();
 
 
