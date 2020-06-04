@@ -90,8 +90,8 @@ var startGame = function(){
       window.alert("You have lost your robot in battle! Game Over!");
       break;
     }
-    endGame();
   }
+  endGame();
 };
 
 // function to end entire game
